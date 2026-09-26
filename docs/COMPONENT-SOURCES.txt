@@ -1,0 +1,34 @@
+HaloSSH — component sources and distribution notices
+
+The project's MIT license does not replace any third-party license.
+
+Pyodide 0.29.5 (Mozilla Public License 2.0)
+Unmodified upstream runtime distributed in node_modules/pyodide.
+Covered Source Code Form, including runtime build scripts:
+https://github.com/pyodide/pyodide/tree/0.29.5
+https://github.com/pyodide/pyodide/archive/refs/tags/0.29.5.tar.gz
+Recipients may obtain the source at these addresses under MPL-2.0.
+See PYODIDE-LICENSE.txt and PYTHON-LICENSE.txt.
+
+lrzsz 0.12.20 (GPL-2.0-or-later)
+Independent lrz and lsz executables are invoked as separate processes.
+The accompanying lrzsz-corresponding-source.tar.gz contains the patched
+corresponding source and build instructions. See LRZSZ-BUILD.txt and
+LRZSZ-LICENSE.txt. These files are distributed inside this same application,
+under Contents/Resources/native, and accessible from About us.
+
+PuTTY 0.85 (MIT)
+https://www.chiark.greenend.org.uk/~sgtatham/putty/releases/0.85.html
+See PUTTY-LICENSE.txt for copyright holders and license conditions.
+
+FreeRDP 3.32.0 and OpenSSL 3.5.8 (Apache-2.0)
+https://github.com/FreeRDP/FreeRDP/tree/3.32.0
+https://github.com/openssl/openssl/tree/openssl-3.5.8
+FreeRDP is linked into the custom studio-rdp helper. The build adds the
+Studio target to FreeRDP's CMakeLists.txt; the original library source
+remains under its original license. Bridge files adapted from FreeRDP's
+test client retain their original copyright and license headers.
+See FREERDP-LICENSE.txt and OPENSSL-LICENSE.txt.
+
+Electron / Chromium notices are in ../LICENSES.chromium.html.
+JavaScript dependency and bundled font notices are in ../THIRD_PARTY_NOTICES.txt.
