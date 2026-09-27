@@ -8,9 +8,9 @@ A customizable SSH terminal and remote file workspace for macOS.
 
 **SSH · SFTP · Tabs · Split panes · Custom themes**
 
-[Download](https://github.com/SanYeCJS/HaloSSH/releases/tag/v1.0.0_20260926) · [简体中文](README.md) · [Report an issue](https://github.com/SanYeCJS/HaloSSH/issues)
+[Download](https://github.com/SanYeCJS/HaloSSH/releases/tag/v1.0.1_20260927) · [简体中文](README.md) · [Report an issue](https://github.com/SanYeCJS/HaloSSH/issues)
 
-**v1.0.0_20260926 · macOS 13+ · Intel / Apple Silicon**
+**v1.0.1_20260927 · macOS 13+ · Intel / Apple Silicon**
 
 </div>
 
@@ -26,12 +26,18 @@ So I built **HaloSSH** to fill that gap in my daily work: a clear workspace that
 
 If HaloSSH helps you, please give this repository a **Star ⭐**. Your support, suggestions and bug reports help me improve it. **Thank you to everyone who uses and supports HaloSSH!**
 
+## What’s new in v1.0.1
+
+SSH handshake timing now follows your system settings; recent sessions use current saved profiles. This release also improves log scrolling, copy/paste and reconnect, with persistent session labels and one notice per outage.
+
+[Release notes](docs/RELEASE-v1.0.1_20260927.md) · [Versioning](docs/VERSIONING.md)
+
 ## Download and install
 
 | Your Mac | Installer |
 |---|---|
-| Apple Silicon / M-series | [Download arm64 DMG](https://github.com/SanYeCJS/HaloSSH/releases/download/v1.0.0_20260926/HaloSSH-1.0.0_20260926-arm64.dmg) |
-| Intel | [Download x64 DMG](https://github.com/SanYeCJS/HaloSSH/releases/download/v1.0.0_20260926/HaloSSH-1.0.0_20260926-x64.dmg) |
+| Apple Silicon / M-series | [Download arm64 DMG](https://github.com/SanYeCJS/HaloSSH/releases/download/v1.0.1_20260927/HaloSSH-1.0.1_20260927-arm64.dmg) |
+| Intel | [Download x64 DMG](https://github.com/SanYeCJS/HaloSSH/releases/download/v1.0.1_20260927/HaloSSH-1.0.1_20260927-x64.dmg) |
 
 1. Check your chip type in Apple menu → About This Mac and download the matching installer.
 2. Open the DMG and drag **HaloSSH** into **Applications**.
@@ -42,7 +48,7 @@ Requires **macOS 13 or later**. Users do not need Xcode, Node.js or a separate P
 
 **Release status:** the app is currently ad-hoc signed and has **not been signed with an Apple Developer ID or notarized by Apple**. See the [installation notes](docs/INSTALL.md) if macOS blocks the first launch. The Intel build has been run and tested locally. The arm64 build has passed architecture, dependency, signature and disk-image checks, but **has not yet been run on M-series hardware**.
 
-Both installers and SHA-256 checksums are available under [Release assets](https://github.com/SanYeCJS/HaloSSH/releases/tag/v1.0.0_20260926).
+Both installers and SHA-256 checksums are available under [Release assets](https://github.com/SanYeCJS/HaloSSH/releases/tag/v1.0.1_20260927).
 
 ## Features
 
