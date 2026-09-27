@@ -1,10 +1,10 @@
 <div align="center">
 
-# HaloSSH
+# HaloSSH — SSH Client and SFTP File Manager for macOS
 
 ### Connect to your world. Focus on your work.
 
-A customizable SSH terminal and remote file workspace for macOS.
+HaloSSH is a macOS SSH client with an integrated SFTP file manager, terminal tabs, split panes and remote text editing. Available for Intel and Apple Silicon Macs.
 
 **SSH · SFTP · Tabs · Split panes · Custom themes**
 

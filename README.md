@@ -1,10 +1,10 @@
 <div align="center">
 
-# HaloSSH
+# HaloSSH — Mac SSH 客户端与 SFTP 文件管理
 
 ### 连接世界，专注此刻。
 
-为 macOS 打造的 SSH 终端与远程文件工作区。
+HaloSSH 是一款面向 macOS 的 SSH 客户端，集成 SSH 终端、SFTP 文件管理与文本编辑，支持 Intel 和 Apple Silicon Mac。
 
 **SSH · SFTP · 多标签 · 分屏 · 自定义主题**
 
