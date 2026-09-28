@@ -8,9 +8,9 @@ HaloSSH 是一款面向 macOS 的 SSH 客户端，集成 SSH 终端、SFTP 文�
 
 **SSH · SFTP · 多标签 · 分屏 · 自定义主题**
 
-[下载安装](https://github.com/SanYeCJS/HaloSSH/releases/tag/v1.0.1_20260927) · [English](README.en.md) · [功能介绍](#功能介绍) · [问题反馈](https://github.com/SanYeCJS/HaloSSH/issues)
+[下载安装](https://github.com/SanYeCJS/HaloSSH/releases/tag/v1.0.2_20260928) · [English](README.en.md) · [功能介绍](#功能介绍) · [问题反馈](https://github.com/SanYeCJS/HaloSSH/issues)
 
-**v1.0.1_20260927 · macOS 13+ · Intel / Apple Silicon**
+**v1.0.2_20260928 · macOS 13+ · Intel / Apple Silicon**
 
 </div>
 
@@ -26,18 +26,18 @@ HaloSSH 是一款面向 macOS 的 SSH 客户端，集成 SSH 终端、SFTP 文�
 
 如果 HaloSSH 对你有帮助，欢迎点击仓库右上角的 **Star ⭐**。你的支持、建议与问题反馈，都是我继续改进它的动力。**感谢每一位使用和支持 HaloSSH 的朋友！**
 
-## v1.0.1 更新
+## v1.0.2 更新
 
-SSH 握手等待默认跟随系统设置，最近使用采用最新保存的连接配置；同时改善日志滚动、复制粘贴和重连，新增会话备注名，并将断线提示合并为每次一次。
+修复运行 Codex CLI 时标签移出窗口后滚轮失效和持续输出闪烁的问题。跨窗口保留鼠标协议、光标、滚动区域与历史阅读位置；普通终端新增 Shift+↑/↓ 和 Shift+PageUp/PageDown 浏览历史。
 
-[完整更新说明](docs/RELEASE-v1.0.1_20260927.md) · [版本管理规则](docs/VERSIONING.md)
+[完整更新说明](docs/RELEASE-v1.0.2_20260928.md) · [版本管理规则](docs/VERSIONING.md)
 
 ## 下载与安装
 
 | 你的 Mac | 安装包 |
 |---|---|
-| Apple Silicon，M 系列芯片 | [下载 arm64 DMG](https://github.com/SanYeCJS/HaloSSH/releases/download/v1.0.1_20260927/HaloSSH-1.0.1_20260927-arm64.dmg) |
-| Intel 处理器 | [下载 x64 DMG](https://github.com/SanYeCJS/HaloSSH/releases/download/v1.0.1_20260927/HaloSSH-1.0.1_20260927-x64.dmg) |
+| Apple Silicon，M 系列芯片 | [下载 arm64 DMG](https://github.com/SanYeCJS/HaloSSH/releases/download/v1.0.2_20260928/HaloSSH-1.0.2_20260928-arm64.dmg) |
+| Intel 处理器 | [下载 x64 DMG](https://github.com/SanYeCJS/HaloSSH/releases/download/v1.0.2_20260928/HaloSSH-1.0.2_20260928-x64.dmg) |
 
 1. 在 Apple 菜单的“关于本机”中确认芯片类型，下载对应安装包。
 2. 打开 DMG，将 **HaloSSH** 拖入 **Applications（应用程序）**。
@@ -48,7 +48,7 @@ SSH 握手等待默认跟随系统设置，最近使用采用最新保存的连�
 
 **本次发布状态：**应用目前使用 ad-hoc 本地签名，尚未完成 Apple Developer ID 签名及公证。下载后可能遇到 macOS 安全提示，请查看[安装说明](docs/INSTALL.md)。Intel 安装包已在本机运行验证；arm64 安装包完成架构、依赖、签名及磁盘映像检查，**尚未在 M 系列真机运行验证**。
 
-安装包与 SHA-256 校验文件均位于 [Release 附件](https://github.com/SanYeCJS/HaloSSH/releases/tag/v1.0.1_20260927)。
+安装包与 SHA-256 校验文件均位于 [Release 附件](https://github.com/SanYeCJS/HaloSSH/releases/tag/v1.0.2_20260928)。
 
 ## 功能介绍
 

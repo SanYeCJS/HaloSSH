@@ -1,0 +1,36 @@
+{
+  "version": "1.0.2_20260928",
+  "checkedAt": "2026-09-28T14:15:51.277Z",
+  "host": {
+    "arch": "x64",
+    "platform": "darwin",
+    "release": "25.6.0"
+  },
+  "checks": [
+    {
+      "arch": "x64",
+      "dmg": "HaloSSH-1.0.2_20260928-x64.dmg",
+      "sha256": "594eff9d5a56ab2cedbd3052b2ded1b63a5be90909c8358c0d4372ba2fd27ede",
+      "signature": "passed",
+      "architecture": "passed",
+      "installLink": "passed",
+      "runtimeLocation": "isolated copy from DMG, image unmounted",
+      "runtime": {
+        "codexTerminalMouseAndSynchronizedOutput": "passed",
+        "detachedTerminalScrollAndHistory": "passed",
+        "browserTabs": "passed",
+        "terminalOutputScrollingAndClipboard": "passed"
+      }
+    },
+    {
+      "arch": "arm64",
+      "dmg": "HaloSSH-1.0.2_20260928-arm64.dmg",
+      "sha256": "067ab6720e247a847d04fa928fd9decde551634c005e33a690bcbf7b44e9751f",
+      "signature": "passed",
+      "architecture": "passed",
+      "installLink": "passed",
+      "runtimeLocation": null,
+      "runtime": "not run: hardware unavailable"
+    }
+  ]
+}
