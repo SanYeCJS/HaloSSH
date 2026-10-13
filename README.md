@@ -8,9 +8,9 @@ HaloSSH 是一款面向 macOS 的 SSH 客户端，集成 SSH 终端、SFTP 文�
 
 **SSH · SFTP · 多标签 · 分屏 · 自定义主题**
 
-[下载安装](https://github.com/SanYeCJS/HaloSSH/releases/tag/v1.0.2_20260928) · [English](README.en.md) · [功能介绍](#功能介绍) · [问题反馈](https://github.com/SanYeCJS/HaloSSH/issues)
+[下载安装](https://github.com/SanYeCJS/HaloSSH/releases/tag/v1.0.3_20261013) · [English](README.en.md) · [功能介绍](#功能介绍) · [问题反馈](https://github.com/SanYeCJS/HaloSSH/issues)
 
-**v1.0.2_20260928 · macOS 13+ · Intel / Apple Silicon**
+**v1.0.3_20261013 · macOS 13+ · Intel / Apple Silicon**
 
 </div>
 
@@ -26,18 +26,20 @@ HaloSSH 是一款面向 macOS 的 SSH 客户端，集成 SSH 终端、SFTP 文�
 
 如果 HaloSSH 对你有帮助，欢迎点击仓库右上角的 **Star ⭐**。你的支持、建议与问题反馈，都是我继续改进它的动力。**感谢每一位使用和支持 HaloSSH 的朋友！**
 
-## v1.0.2 更新
+## v1.0.3 更新
 
-修复运行 Codex CLI 时标签移出窗口后滚轮失效和持续输出闪烁的问题。跨窗口保留鼠标协议、光标、滚动区域与历史阅读位置；普通终端新增 Shift+↑/↓ 和 Shift+PageUp/PageDown 浏览历史。
+SSH 登录支持「记住密码，下次自动登录」，常用会话、最近使用与刷新重连共用。超时后点击终端或文件树刷新，自动重新连接当前服务器；未保存或密码失效时重新询问。密码登录成功才加密保存，可通过会话右键菜单确认后忘记。
 
-[完整更新说明](docs/RELEASE-v1.0.2_20260928.md) · [版本管理规则](docs/VERSIONING.md)
+![SSH 登录与可选记住密码](docs/images/remember-password-zh.png)
+
+[完整更新说明](docs/RELEASE-v1.0.3_20261013.md) · [版本管理规则](docs/VERSIONING.md)
 
 ## 下载与安装
 
 | 你的 Mac | 安装包 |
 |---|---|
-| Apple Silicon，M 系列芯片 | [下载 arm64 DMG](https://github.com/SanYeCJS/HaloSSH/releases/download/v1.0.2_20260928/HaloSSH-1.0.2_20260928-arm64.dmg) |
-| Intel 处理器 | [下载 x64 DMG](https://github.com/SanYeCJS/HaloSSH/releases/download/v1.0.2_20260928/HaloSSH-1.0.2_20260928-x64.dmg) |
+| Apple Silicon，M 系列芯片 | [下载 arm64 DMG](https://github.com/SanYeCJS/HaloSSH/releases/download/v1.0.3_20261013/HaloSSH-1.0.3_20261013-arm64.dmg) |
+| Intel 处理器 | [下载 x64 DMG](https://github.com/SanYeCJS/HaloSSH/releases/download/v1.0.3_20261013/HaloSSH-1.0.3_20261013-x64.dmg) |
 
 1. 在 Apple 菜单的“关于本机”中确认芯片类型，下载对应安装包。
 2. 打开 DMG，将 **HaloSSH** 拖入 **Applications（应用程序）**。
@@ -48,7 +50,7 @@ HaloSSH 是一款面向 macOS 的 SSH 客户端，集成 SSH 终端、SFTP 文�
 
 **本次发布状态：**应用目前使用 ad-hoc 本地签名，尚未完成 Apple Developer ID 签名及公证。下载后可能遇到 macOS 安全提示，请查看[安装说明](docs/INSTALL.md)。Intel 安装包已在本机运行验证；arm64 安装包完成架构、依赖、签名及磁盘映像检查，**尚未在 M 系列真机运行验证**。
 
-安装包与 SHA-256 校验文件均位于 [Release 附件](https://github.com/SanYeCJS/HaloSSH/releases/tag/v1.0.2_20260928)。
+安装包与 SHA-256 校验文件均位于 [Release 附件](https://github.com/SanYeCJS/HaloSSH/releases/tag/v1.0.3_20261013)。
 
 ## 功能介绍
 
@@ -64,6 +66,7 @@ HaloSSH 是一款面向 macOS 的 SSH 客户端，集成 SSH 终端、SFTP 文�
 ### SSH 登录一次，终端与文件一起使用
 
 - SSH2 使用 macOS OpenSSH，支持密码、私钥和终端交互认证，以及 SSH Agent、跳板机、保活和端口转发。
+- 密码登录可选记住密码，重启后自动登录；会话右键支持确认后忘记，密码不包含在配置导出中。
 - SSH 登录成功后，右侧文件树复用当前连接的认证，无需再次输入文件管理密码。
 - 支持按需展开目录、上传、下载、新建文件或文件夹、重命名及删除；操作结果以服务器响应为准。
 - 文本文件默认只读预览，点击“编辑”后修改并保存到服务器；保存前检查远程文件是否被改动。
@@ -100,7 +103,7 @@ HaloSSH 是一款面向 macOS 的 SSH 客户端，集成 SSH 终端、SFTP 文�
 | 文件传输 | 图形文件管理，以及 XMODEM / YMODEM / ZMODEM |
 | 日志 | 原始或纯文本日志、时间戳与轮转、搜索、终端内容导出和 PDF |
 | 配置 | 工作区及主题导入导出、OpenSSH Config 基础字段导入 |
-| 工作区保护 | 可选主密码加密、工作区锁定、主机指纹确认、系统加密保存文件凭据 |
+| 工作区保护 | 可选主密码加密、工作区锁定、主机指纹确认、系统加密保存 SSH 登录密码和文件凭据 |
 
 高级协议及硬件相关功能仍需要更多真实环境反馈，当前不承诺覆盖全部服务器和企业认证组合。RDP 尚不包含 RemoteApp、磁盘/打印机/智能卡重定向、网关及 Azure AD 登录。使用脚本前请先检查内容；主密码无法找回。
 

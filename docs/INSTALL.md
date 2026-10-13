@@ -14,7 +14,9 @@ shasum -a 256 -c SHA256SUMS.txt
 
 若只下载一个 DMG，可以运行 `shasum -a 256 文件名.dmg`，与 Release 的对应值对照。校验值一致说明文件与发布文件一致，不代表 Apple 公证。
 
-首次设置可跳过。SSH 在终端中完成密码、私钥口令等交互认证；右侧文件树在 SSH 登录成功后复用认证，服务器需启用 SFTP 子系统。如果文件树不可用，可先检查服务器是否允许 SFTP。
+首次设置可跳过。SSH 服务器要求密码时可勾选「记住密码，下次自动登录」，也可选择在终端中输入。私钥口令、MFA 与跳板链继续在终端交互认证。右侧文件树在 SSH 登录成功后复用认证，服务器需启用 SFTP 子系统。如果文件树不可用，可先检查服务器是否允许 SFTP。
+
+保存或读取密码时，macOS 可能要求允许 HaloSSH 访问钥匙串；这是本机系统加密授权，与服务器密码不同。仅在系统弹窗中输入 Mac 登录密码，勿将其输入 SSH 密码框。升级当前 ad-hoc 签名的应用后，系统可能再次询问。可在会话右键菜单中选择「忘记已保存密码」并确认删除。
 
 ## English
 
@@ -24,4 +26,6 @@ Open the DMG, drag HaloSSH into Applications, then launch it from there. This re
 
 To verify both installers, place them and `SHA256SUMS.txt` in the same directory and run the command above. If you downloaded only one installer, run `shasum -a 256 filename.dmg` and compare the result with the corresponding published value. A matching checksum confirms file integrity; it does not mean the app is notarized.
 
-The initial setup is optional. SSH password and key-passphrase prompts are handled in the terminal. The file tree reuses the authenticated SSH connection and requires the server's SFTP subsystem.
+The initial setup is optional. When SSH requests a password, you can select “Remember password for automatic login” or choose manual terminal input. Key passphrases, MFA and jump routes remain interactive in the terminal. The file tree reuses the authenticated SSH connection and requires the server's SFTP subsystem.
+
+macOS may ask you to allow HaloSSH to access Keychain when saving or reading credentials. This authorizes local encryption and is separate from your server login. Enter your Mac login password only in the system dialog, never in the SSH password field. Updating this ad-hoc signed app may trigger authorization again. To remove a saved password, select “Forget saved password” in the session context menu and confirm.

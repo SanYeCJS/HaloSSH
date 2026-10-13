@@ -8,9 +8,9 @@ HaloSSH is a macOS SSH client with an integrated SFTP file manager, terminal tab
 
 **SSH · SFTP · Tabs · Split panes · Custom themes**
 
-[Download](https://github.com/SanYeCJS/HaloSSH/releases/tag/v1.0.2_20260928) · [简体中文](README.md) · [Report an issue](https://github.com/SanYeCJS/HaloSSH/issues)
+[Download](https://github.com/SanYeCJS/HaloSSH/releases/tag/v1.0.3_20261013) · [简体中文](README.md) · [Report an issue](https://github.com/SanYeCJS/HaloSSH/issues)
 
-**v1.0.2_20260928 · macOS 13+ · Intel / Apple Silicon**
+**v1.0.3_20261013 · macOS 13+ · Intel / Apple Silicon**
 
 </div>
 
@@ -26,18 +26,18 @@ So I built **HaloSSH** to fill that gap in my daily work: a clear workspace that
 
 If HaloSSH helps you, please give this repository a **Star ⭐**. Your support, suggestions and bug reports help me improve it. **Thank you to everyone who uses and supports HaloSSH!**
 
-## What’s new in v1.0.2
+## What’s new in v1.0.3
 
-Fixes lost mouse scrolling after detaching a Codex CLI tab and blank-screen flicker during streaming redraws. Window transfers preserve mouse encoding, cursor state, scrolling margins and the history viewport. Normal terminals support Shift+Up/Down and Shift+PageUp/PageDown for history navigation.
+Optionally remember SSH passwords for automatic login from Favorites, Recent and reconnect. After a timeout, refresh the terminal or file tree to reconnect the current server. Missing or expired passwords trigger a new prompt. Credentials are saved encrypted only after successful authentication, and can be forgotten with confirmation from the session menu.
 
-[Release notes](docs/RELEASE-v1.0.2_20260928.md) · [Versioning](docs/VERSIONING.md)
+[Release notes](docs/RELEASE-v1.0.3_20261013.md) · [Versioning](docs/VERSIONING.md)
 
 ## Download and install
 
 | Your Mac | Installer |
 |---|---|
-| Apple Silicon / M-series | [Download arm64 DMG](https://github.com/SanYeCJS/HaloSSH/releases/download/v1.0.2_20260928/HaloSSH-1.0.2_20260928-arm64.dmg) |
-| Intel | [Download x64 DMG](https://github.com/SanYeCJS/HaloSSH/releases/download/v1.0.2_20260928/HaloSSH-1.0.2_20260928-x64.dmg) |
+| Apple Silicon / M-series | [Download arm64 DMG](https://github.com/SanYeCJS/HaloSSH/releases/download/v1.0.3_20261013/HaloSSH-1.0.3_20261013-arm64.dmg) |
+| Intel | [Download x64 DMG](https://github.com/SanYeCJS/HaloSSH/releases/download/v1.0.3_20261013/HaloSSH-1.0.3_20261013-x64.dmg) |
 
 1. Check your chip type in Apple menu → About This Mac and download the matching installer.
 2. Open the DMG and drag **HaloSSH** into **Applications**.
@@ -48,7 +48,7 @@ Requires **macOS 13 or later**. Users do not need Xcode, Node.js or a separate P
 
 **Release status:** the app is currently ad-hoc signed and has **not been signed with an Apple Developer ID or notarized by Apple**. See the [installation notes](docs/INSTALL.md) if macOS blocks the first launch. The Intel build has been run and tested locally. The arm64 build has passed architecture, dependency, signature and disk-image checks, but **has not yet been run on M-series hardware**.
 
-Both installers and SHA-256 checksums are available under [Release assets](https://github.com/SanYeCJS/HaloSSH/releases/tag/v1.0.2_20260928).
+Both installers and SHA-256 checksums are available under [Release assets](https://github.com/SanYeCJS/HaloSSH/releases/tag/v1.0.3_20261013).
 
 ## Features
 
@@ -64,6 +64,7 @@ Both installers and SHA-256 checksums are available under [Release assets](https
 ### One SSH login, terminals and files together
 
 - SSH2 through macOS OpenSSH, with password, private-key and interactive authentication, SSH Agent, jump hosts, keepalive and port forwarding.
+- Optionally remember SSH passwords across app restarts, or forget them with confirmation from the session menu. Passwords are excluded from configuration exports.
 - The right-hand SFTP tree reuses the active SSH login, avoiding a second file-manager password prompt.
 - Browse directories on demand, upload and download, create files and folders, rename and delete. Results are refreshed after the server responds.
 - Preview text as read-only, select **Edit** to make changes, then save to the server. Saving checks whether the remote file has changed.
