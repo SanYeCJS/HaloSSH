@@ -26,6 +26,8 @@
 
 使用独立回环 SSH 服务和合成密码验证首次保存、完整重启后自动登录、密码失效与更新、地址变更、并发登录、取消与忘记密码、配置导出及实际保活超时后的刷新恢复；不使用用户真实服务器或密码。
 
+65 项单元测试通过；上述新增密码功能的 12 项端到端检查在当前源码运行环境通过。最终 Intel DMG 的隔离安装副本通过九组回归，包括八服务器并发、12 万行日志、密码输入、复制粘贴、最近会话、握手超时、会话备注、跨窗口终端和中英文。安装副本的额外密码持久化检查等待 macOS 钥匙串授权而未完成，不计为通过；安装包代码与已验证构建输入逐文件一致。首次保存、读取或升级后可能需要系统钥匙串授权，详见安装说明。
+
 应用仍使用本地 ad-hoc 签名，尚未完成 Apple Developer ID 签名与公证。Apple Silicon 安装包进行架构、依赖、签名和镜像检查，尚未在 M 系列真机运行验证。详见 [安装说明](INSTALL.md)。
 
 ---
@@ -49,6 +51,8 @@ OpenSSH host-key verification remains enabled. Key passphrases, MFA and jump rou
 Requires macOS 13+. Save open edits, quit HaloSSH and replace it in Applications. Existing sessions and settings are retained. Choose `x64` for Intel or `arm64` for Apple Silicon. SHA-256 checksums are included in `SHA256SUMS.txt`.
 
 Tests use independent loopback SSH servers and synthetic credentials, covering restart persistence, expired passwords, destination changes, concurrent logins, cancellation, forgetting, exports and refresh after a real keepalive timeout. No user servers or credentials are used.
+
+All 65 unit tests pass, along with 12 end-to-end checks of the new password flows in the current source runtime. An isolated installation copied from the final Intel DMG passes nine regression suites, including eight concurrent servers, 120,000 log lines, password input, clipboard, Recent, handshake timeouts, session labels, detached terminals and both UI languages. The additional installed-copy credential-persistence test awaited macOS Keychain authorization and did not complete; it is not counted as passing. Packaged code matches the validated build inputs byte for byte. Keychain authorization may be required on first use or after an upgrade; see the installation notes.
 
 The app remains ad-hoc signed and is not Apple-notarized. Apple Silicon receives architecture, dependency, signature and disk-image checks, without M-series hardware runtime validation. See [installation notes](INSTALL.md).
 
